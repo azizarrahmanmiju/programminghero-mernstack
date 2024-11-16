@@ -43,3 +43,8 @@
 .read-the-docs {
   color: #888;
 }
+
+form.input{
+  color: blueviolet;
+  width: 400px;
+}

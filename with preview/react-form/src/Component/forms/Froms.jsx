@@ -1,17 +1,23 @@
 
 const Froms = () => {
+
+    const onsubmit = e => {
+        e.preventDefault()
+        console.log("submitted", e.target.name.value, e.target.password.value)
+    }
+    const namechenge = e => {
+
+        console.log("chenged", e.target.value)
+    }
     return (
         <div>
-            <form>
-                <p>Enter Name</p>
-                <input type="text" name="name"></input>
-                <p>Enter Email</p>
-                <input type="email" name="email"></input>
-                <p>Enter password</p>
-                <input type="password" name="password"></input>
-
+            <form onSubmit={onsubmit}>
+                <input
+                    onChange={namechenge}
+                    type="text" name="name" ></input><br />
+                <input type="password" name="password" ></input><br />
+                <input type="submit" />
             </form>
-
         </div>
     );
 };
